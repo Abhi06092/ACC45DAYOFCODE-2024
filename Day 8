@@ -1,0 +1,13 @@
+# Number of test cases
+T = int(input())
+
+# Loop through each test case
+for _ in range(T):
+    # Read the profits P, Q, R, S
+    P, Q, R, S = map(int, input().split())
+    
+    # Check if any company has a monopoly
+    if P > Q + R + S or Q > P + R + S or R > P + Q + S or S > P + Q + R:
+        print("YES")
+    else:
+        print("NO")
