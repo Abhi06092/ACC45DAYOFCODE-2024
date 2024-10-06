@@ -1,0 +1,13 @@
+# Reading number of test cases
+T = int(input())
+
+# Processing each test case
+for _ in range(T):
+    X, Y = map(int, input().split())  # Reading X and Y values
+    
+    if X >= Y:
+        print(0)  # Should not rent at all
+    else:
+        # Calculate maximum months he can rent the cooler
+        max_months = (Y // X) - 1
+        print(max_months)
