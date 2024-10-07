@@ -1,0 +1,22 @@
+# Function to solve the problem
+def can_measure_weight(test_cases):
+    for case in test_cases:
+        W, X, Y, Z = case
+        
+        # Check if W can be obtained by any single, double, or triple combination of X, Y, Z
+        if (W == X) or (W == Y) or (W == Z) or \
+           (W == X + Y) or (W == X + Z) or (W == Y + Z) or \
+           (W == X + Y + Z):
+            print("YES")
+        else:
+            print("NO")
+
+# Input reading
+T = int(input())  # Number of test cases
+test_cases = []
+
+for _ in range(T):
+    test_cases.append(tuple(map(int, input().split())))
+
+# Solve the problem
+can_measure_weight(test_cases)
