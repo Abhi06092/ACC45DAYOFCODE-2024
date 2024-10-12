@@ -1,0 +1,15 @@
+# Number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read inputs for each test case
+    N, K, M = map(int, input().split())
+    
+    # Calculate maximum candies each bag can hold
+    candies_per_bag = K * M
+    
+    # Calculate the number of bags needed (ceiling of N / candies_per_bag)
+    bags_needed = (N + candies_per_bag - 1) // candies_per_bag
+    
+    # Output the result
+    print(bags_needed)
