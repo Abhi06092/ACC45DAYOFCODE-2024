@@ -1,0 +1,15 @@
+# Input the number of test cases
+T = int(input())
+
+# Loop for each test case
+for _ in range(T):
+    # Input the times X and Y
+    X, Y = map(int, input().split())
+    
+    # Compare X and Y to determine which is faster
+    if X < Y:
+        print("BIKE")
+    elif X > Y:
+        print("CAR")
+    else:
+        print("SAME")
