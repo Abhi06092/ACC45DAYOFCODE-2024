@@ -1,0 +1,13 @@
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read the four referee decisions
+    R1, R2, R3, R4 = map(int, input().split())
+    
+    # Check if all decisions are 0
+    if R1 == 0 and R2 == 0 and R3 == 0 and R4 == 0:
+        print("IN")
+    else:
+        print("OUT")
