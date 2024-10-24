@@ -1,0 +1,30 @@
+# Function to determine the degree of the polynomial
+def degree_of_polynomial(T, test_cases):
+    results = []
+    for i in range(T):
+        N = test_cases[i][0]
+        coefficients = test_cases[i][1]
+        
+        # Find the index of the highest non-zero coefficient
+        for j in range(N-1, -1, -1):
+            if coefficients[j] != 0:
+                results.append(j)
+                break
+    
+    return results
+
+# Input parsing
+T = int(input())  # Number of test cases
+test_cases = []
+
+for _ in range(T):
+    N = int(input())  # Number of terms in the polynomial
+    coefficients = list(map(int, input().split()))  # Coefficients of the polynomial
+    test_cases.append((N, coefficients))
+
+# Get the degrees of the polynomials for all test cases
+results = degree_of_polynomial(T, test_cases)
+
+# Output the results
+for result in results:
+    print(result)
