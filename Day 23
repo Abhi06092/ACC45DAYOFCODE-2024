@@ -1,0 +1,23 @@
+# Number of test cases
+T = int(input())
+
+# Loop through each test case
+for _ in range(T):
+    # Read the total number of problems
+    N = int(input())
+    # Read the list of contest codes
+    contest_codes = input().split()
+    
+    # Initialize counters for each contest
+    start38_count = 0
+    ltime108_count = 0
+    
+    # Count the occurrences of each contest code
+    for code in contest_codes:
+        if code == "START38":
+            start38_count += 1
+        elif code == "LTIME108":
+            ltime108_count += 1
+    
+    # Output the results for the current test case
+    print(start38_count, ltime108_count)
