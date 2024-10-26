@@ -1,0 +1,17 @@
+# Function to calculate the number of Tuesdays within N days starting from Monday
+def count_tuesdays(N):
+    # Full weeks contribution + extra day if remainder >= 2
+    return (N // 7) + (1 if N % 7 >= 2 else 0)
+
+# Reading number of test cases
+T = int(input())
+results = []
+
+# Processing each test case
+for _ in range(T):
+    N = int(input())
+    results.append(count_tuesdays(N))
+
+# Output each result for each test case
+for result in results:
+    print(result)
