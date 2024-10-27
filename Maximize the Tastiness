@@ -1,0 +1,13 @@
+# Read number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read tastiness values of ingredients
+    a, b, c, d = map(int, input().split())
+    
+    # Calculate all possible tastiness values for the dish
+    max_tastiness = max(a + c, a + d, b + c, b + d)
+    
+    # Output the result
+    print(max_tastiness)
