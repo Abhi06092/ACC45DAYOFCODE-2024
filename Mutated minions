@@ -1,0 +1,23 @@
+# Function to determine the number of Wolverine-like minions after transformation
+def count_wolverine_like_minions(test_cases):
+    results = []
+    for case in test_cases:
+        N, K, characteristics = case
+        count = sum(1 for c in characteristics if (c + K) % 7 == 0)
+        results.append(count)
+    return results
+
+# Reading input
+T = int(input().strip())
+test_cases = []
+for _ in range(T):
+    N, K = map(int, input().strip().split())
+    characteristics = list(map(int, input().strip().split()))
+    test_cases.append((N, K, characteristics))
+
+# Processing each test case
+results = count_wolverine_like_minions(test_cases)
+
+# Printing results
+for result in results:
+    print(result)
