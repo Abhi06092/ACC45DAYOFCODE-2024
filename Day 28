@@ -1,0 +1,15 @@
+import math
+
+# Input number of test cases
+T = int(input())
+
+# Process each test case
+results = []
+for _ in range(T):
+    A, B, K = map(int, input().split())
+    distance = abs(A - B)
+    steps = (distance + K - 1) // K  # Using integer division for ceiling
+    results.append(steps)
+
+# Output all results
+print("\n".join(map(str, results)))
