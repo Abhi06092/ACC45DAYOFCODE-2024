@@ -1,0 +1,11 @@
+T = int(input("Enter the number of test cases: "))
+
+for _ in range(T):
+    P, Q = map(int, input().split())
+    total_points = P + Q
+    serve_block = total_points // 2
+    
+    if serve_block % 2 == 0:
+        print("Alice")
+    else:
+        print("Bob")
