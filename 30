@@ -1,0 +1,19 @@
+# Read number of test cases
+T = int(input().strip())
+
+# Process each test case
+results = []
+for _ in range(T):
+    # Read initial score A:B
+    A, B = map(int, input().strip().split())
+    # Read final score C:D
+    C, D = map(int, input().strip().split())
+    
+    # Check if transition from A:B to C:D is possible
+    if C >= A and D >= B:
+        results.append("POSSIBLE")
+    else:
+        results.append("IMPOSSIBLE")
+
+# Output all results
+print("\n".join(results))
