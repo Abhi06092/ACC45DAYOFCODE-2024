@@ -1,0 +1,38 @@
+def find_billiards_winner(rounds):
+    max_lead = 0
+    winner = None
+    cumulative_score_p1 = 0
+    cumulative_score_p2 = 0
+    
+    for round in rounds:
+        score_p1, score_p2 = round
+        cumulative_score_p1 += score_p1
+        cumulative_score_p2 += score_p2
+        
+        # Determine the lead and leader for this round
+        if cumulative_score_p1 > cumulative_score_p2:
+            lead = cumulative_score_p1 - cumulative_score_p2
+            leader = 1
+        else:
+            lead = cumulative_score_p2 - cumulative_score_p1
+            leader = 2
+        
+        # Update max lead and winner if this round's lead is the highest seen so far
+        if lead > max_lead:
+            max_lead = lead
+            winner = leader
+    
+    return winner, max_lead
+
+# Example input
+rounds = [
+    (140, 82),
+    (89, 134),
+    (90, 110),
+    (112, 106),
+    (88, 90)
+]
+
+# Find winner and max lead
+winner, max_lead = find_billiards_winner(rounds)
+print(f"Winner: Player {winner} with a lead of {max_lead}")
