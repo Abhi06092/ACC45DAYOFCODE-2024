@@ -1,0 +1,14 @@
+# Read number of test cases
+T = int(input().strip())
+
+# Loop through each test case
+results = []
+for _ in range(T):
+    N = int(input().strip())
+    if N % 4 == 0:
+        results.append("Good")
+    else:
+        results.append("Not Good")
+
+# Output all results
+print("\n".join(results))
