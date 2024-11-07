@@ -1,0 +1,22 @@
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read the number of spooky days
+    N = int(input())
+    
+    # Calculate the number of full weeks
+    weeks = N // 7
+    # Calculate the remaining days
+    remainder = N % 7
+    
+    # Initialize the count of Tuesdays
+    count_tuesdays = weeks
+    
+    # Check if there is an additional Tuesday in the remaining days
+    if remainder >= 2:
+        count_tuesdays += 1
+    
+    # Print the result for the current test case
+    print(count_tuesdays)
