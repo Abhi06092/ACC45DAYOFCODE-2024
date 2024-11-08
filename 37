@@ -1,0 +1,40 @@
+def min_flips_to_zero(T, test_cases):
+    results = []
+    for case in test_cases:
+        N, A = case
+        current_sum = sum(A)
+        
+        # Check if it's possible to make the sum zero
+        if current_sum == 0:
+            results.append(0)
+            continue
+        if abs(current_sum) % 2 != 0:
+            results.append(-1)
+            continue
+        
+        # Count the number of 1s and -1s
+        count_1 = A.count(1)
+        count_neg_1 = A.count(-1)
+        
+        # The minimum number of flips needed is half the absolute value of the sum
+        min_flips = abs(current_sum) // 2
+        
+        if min_flips <= min(count_1, count_neg_1):
+            results.append(min_flips)
+        else:
+            results.append(-1)
+    
+    return results
+
+# Input reading
+T = int(input())
+test_cases = []
+for _ in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+    test_cases.append((N, A))
+
+# Output results
+results = min_flips_to_zero(T, test_cases)
+for res in results:
+    print(res)
