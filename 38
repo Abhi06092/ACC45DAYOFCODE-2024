@@ -1,0 +1,19 @@
+import sys
+import math
+
+# Read number of test cases
+T = int(sys.stdin.readline())
+
+# Process each test case
+for _ in range(T):
+    # Read input values for the test case
+    N, A, B = map(int, sys.stdin.readline().split())
+    
+    # Calculate the number of rounds (log base 2 of N)
+    rounds = int(math.log2(N))
+    
+    # Calculate the total time for all rounds and breaks
+    total_time = (rounds * A) + ((rounds - 1) * B)
+    
+    # Print the result
+    print(total_time)
