@@ -1,0 +1,8 @@
+# Read input
+X, Y = map(int, input().split())
+
+# Calculate total time spent watching the movie
+total_time = (Y // 2) + (X - Y)
+
+# Print the result
+print(total_time)
