@@ -1,0 +1,12 @@
+# Reading the number of test cases
+T = int(input())
+
+# Processing each test case
+for _ in range(T):
+    X, Y = map(int, input().split())
+    
+    # Calculate the number of people who can take a bath
+    max_people = X // (2 * Y)
+    
+    # Print the result for the current test case
+    print(max_people)
