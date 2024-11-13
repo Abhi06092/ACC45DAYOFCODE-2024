@@ -1,0 +1,13 @@
+# Read the number of test cases
+T = int(input())
+
+# Iterate through each test case
+for _ in range(T):
+    # Read the prices of the 3 items
+    A, B, C = map(int, input().split())
+    
+    # Calculate the amount Chef needs to pay
+    total_cost = A + B + C - min(A, B, C)
+    
+    # Print the result
+    print(total_cost)
