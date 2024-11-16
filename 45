@@ -1,0 +1,12 @@
+# Read number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    N = int(input())
+    
+    # Calculate the number of coins required
+    coins_required = (N // 5) * 4 + (N % 5)
+    
+    # Print the result for this test case
+    print(coins_required)
